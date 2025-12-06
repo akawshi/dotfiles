@@ -12,7 +12,9 @@ fi
 if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
   source /usr/share/zsh/manjaro-zsh-prompt
 fi
-
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+FZF_CTRL_R_COMMAND= FZF_ALT_C_COMMAND= source <(fzf --zsh)
 eval "$(sheldon source)"
 
 export NVM_DIR="$HOME/.config/nvm"
